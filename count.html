@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Countdown Timer</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.css">
+  <style>
+  .flipdown {
+    background: red;
+    padding: 10px;
+    padding-bottom:20px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100px;
+  }
+
+  .flipdown .rotor-leaf-front ::after {
+    color: aqua;
+  }
+  </style>
+  
+</head>
+<body>
+<div id="flipdown" class="flipdown"></div>
+
+<script src="https://cdn.jsdelivr.net/npm/flipdown@0.3.2/dist/flipdown.min.js"></script>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    var countdownDate = Math.floor(new Date('2025-02-15T09:00:00').getTime() / 1000);
+    new FlipDown(countdownDate).start();
+  });
+</script>
+
+
+</body>
+</html>
