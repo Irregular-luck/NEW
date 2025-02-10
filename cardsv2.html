@@ -5,23 +5,13 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Scattered Cards with Flip Effect</title>
     <style>
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background-color: #121212;
-            overflow: hidden;
-        }
+       
 
         .card-container {
             position: relative;
             width: 90vw;
             height: 400px;
-            background-image: url(./carddivbg.webp);
-    background-size: cover;
-    background-position: center;
-    padding: 20px;
+            padding: 20px;
         }
 
         .card {
@@ -96,18 +86,8 @@
         .card:nth-child(4) { top: 70px; left: 60vw; transform: rotate(10deg); }
         .card:nth-child(5) { top: 30px; left: 80vw; transform: rotate(-5deg); }
 
-        .reset-btn {
-            position: fixed;
-            bottom: 20px;
-            right: 20px;
-            padding: 10px 15px;
-            background-color: #ff5722;
-            color: white;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
-            display: none;
-        }
+        
+        
     </style>
 </head>
 <body>
@@ -158,8 +138,7 @@
             </div>
         </div>
     </div>
-    <button class="reset-btn" onclick="resetCards()">Reset</button>
-
+    
     <script>
         const cards = document.querySelectorAll('.card');
         const resetBtn = document.querySelector('.reset-btn');
