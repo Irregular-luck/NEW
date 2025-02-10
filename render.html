@@ -39,51 +39,28 @@
     }
 
     @keyframes shine {
-      0% {
-        filter: brightness(1);
-      }
-      50% {
-        filter: brightness(2.5);
-      }
-      100% {
-        filter: brightness(1);
-      }
+      0% { filter: brightness(1); }
+      50% { filter: brightness(2.5); }
+      100% { filter: brightness(1); }
     }
 
     @keyframes zoomIn {
-      0% {
-        transform: scale(1);
-        opacity: 1;
-      }
-      100% {
-        transform: scale(11);
-        opacity: 0;
-      }
-    }
-
-    main {
-      display: none;
-      animation: fadeIn 1s ease 7.5s forwards;
-    }
-
-    @keyframes fadeIn {
-      0% {
-        opacity: 0;
-      }
-      100% {
-        display: block;
-        opacity: 1;
-      }
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(11); opacity: 0; }
     }
   </style>
 </head>
 <body>
+
   <div id="preloader">
-    <img src="https://i.ibb.co/93ygqwgj/bird-removebg.png" alt="Shining Bird">
+    <img src="https://raw.githubusercontent.com/Irregular-luck/svg-host/refs/heads/main/SSC%20SYMBOL%20%20(20250210051857).svg" alt="Shining Bird">
   </div>
 
-  <main>
-    <h1 style="color: white; text-align: center;">Welcome to the Website</h1>
-  </main>
+  <script>
+    setTimeout(() => {
+      window.location.href = "index.html"; // Redirect to index.html
+    }, 5500); // Adjust time to match the animation
+  </script>
+
 </body>
 </html>
