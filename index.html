@@ -1,153 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Floating Blur Navbar</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="card.main.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="card.main.css" />
 
-    <link rel="stylesheet" href="location.css">
+    <link rel="stylesheet" href="location.css" />
     <script src="https://cdn.tailwindcss.com"></script>
-    
-
-</head>
-<body>
-
+  </head>
+  <body>
     <nav class="navbar">
-        <a href="register.html" class="register-btn">Register</a>
-        <div class="logo"></div>
-        <div class="menu" onclick="toggleMenu()">☰</div>
+      <a href="register.html" class="register-btn">Register</a>
+      <div class="logo"></div>
+      <div class="menu" onclick="toggleMenu()">☰</div>
     </nav>
 
     <div class="sidebar" id="sidebar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#">Services</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
     </div>
 
-    <section id="home" class="flex items-center justify-center h-screen  text-center">
-        <div data-aos="fade-up">
-            <h1 class="text-5xl font-bold">23RD ANNUAL ISTE<br>
-            STATE STUDENT CONVENCTION<br>
-            GOVERNMENT ENGINEERING COLLEGE KOZHIKODE<br>
-            </h1>
-        </div>
+    <section
+      id="home"
+      class="flex items-center justify-center h-screen text-center"
+    >
+      <div data-aos="fade-up">
+        <h1 class="text-5xl font-bold">
+          23RD ANNUAL ISTE<br />
+          STATE STUDENT CONVENCTION<br />
+          GOVERNMENT ENGINEERING COLLEGE KOZHIKODE<br />
+        </h1>
+      </div>
     </section>
 
-
-    <div class="grid grid-cols-4 gap-8 text-center bg-[url('https://i.ibb.co/qM4sHhLC/Whats-App-Image-2025-02-09-at-14-08-40-cc47b0d2.jpg')] bg-cover bg-center bg-no-repeat p-8 h-50 text-white"
-     style="font-family: 'Roboto Condensed', sans-serif;">
-
-
-        <div>
+    <div
+      class="grid grid-cols-4 gap-8 text-center bg-[url('https://i.ibb.co/qM4sHhLC/Whats-App-Image-2025-02-09-at-14-08-40-cc47b0d2.jpg')] bg-cover bg-center bg-no-repeat p-8 h-50 text-white"
+      style="font-family: 'Roboto Condensed', sans-serif"
+    >
+      <div>
         <p id="days" class="text-6xl font-bold">0</p>
         <p class="mt-2 text-lg uppercase">Days</p>
       </div>
-        <div>
-          <p id="hours" class="text-6xl font-bold">0</p>
-          <p class="mt-2 text-lg uppercase">Hours</p>
+      <div>
+        <p id="hours" class="text-6xl font-bold">0</p>
+        <p class="mt-2 text-lg uppercase">Hours</p>
+      </div>
+      <div>
+        <p id="minutes" class="text-6xl font-bold">0</p>
+        <p class="mt-2 text-lg uppercase">Minutes</p>
+      </div>
+      <div>
+        <p id="seconds" class="text-6xl font-bold">0</p>
+        <p class="mt-2 text-lg uppercase">Seconds</p>
+      </div>
+    </div>
+
+    <section
+      id="about"
+      class="h-screen flex flex-col justify-center items-center text-white bg-gradient-to-b from-orange-600 to-yellow-800"
+    >
+      <h2 class="text-4xl font-bold">Event Details</h2>
+      <p class="text-lg mt-4">
+        The 23rd Annual ISTE State Student Convention is a prestigious gathering
+        of aspiring engineers and innovators from across Kerala. Hosted by
+        Government Engineering College Kozhikode, this event serves as a
+        platform to celebrate creativity, knowledge sharing, and technological
+        excellence. With a variety of workshops, competitions, and networking
+        opportunities, the convention fosters a spirit of collaboration and
+        encourages students to explore emerging trends in engineering and
+        technology. It is a unique occasion where ideas converge, talents shine,
+        and participants leave inspired to make a meaningful impact in their
+        fields.
+      </p>
+      <section class="card-container">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"></div>
+            <div class="card-back">
+              <h2>Card 1</h2>
+              <p>Details about Card 1.</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <p id="minutes" class="text-6xl font-bold">0</p>
-          <p class="mt-2 text-lg uppercase">Minutes</p>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"></div>
+            <div class="card-back">
+              <h2>Card 2</h2>
+              <p>Details about Card 2.</p>
+            </div>
+          </div>
         </div>
-        <div>
-          <p id="seconds" class="text-6xl font-bold">0</p>
-          <p class="mt-2 text-lg uppercase">Seconds</p>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"></div>
+            <div class="card-back">
+              <h2>Card 3</h2>
+              <p>Details about Card 3.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"></div>
+            <div class="card-back">
+              <h2>Card 4</h2>
+              <p>Details about Card 4.</p>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front"></div>
+            <div class="card-back">
+              <h2>Card 5</h2>
+              <p>Details about Card 5.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <button class="reset-btn" onclick="resetCards()">×</button>
+    </section>
+    <section>
+      <div class="location-section">
+        <div class="glass-layer"></div>
+        <div class="content">
+          <div class="location-text">
+            <h2>Venue: Govt Engineering College Kozhikode</h2>
+            <a
+              href="https://maps.app.goo.gl/HPhHBnZdf1ajnRDn8"
+              class="map-btn"
+              target="_blank"
+              >Open in Maps</a
+            >
+          </div>
+          <div class="map-wrapper">
+            <div class="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.6682563069576!2d75.76770577594576!3d11.285778688895697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65edc9239e10b%3A0xc923c3216410409a!2sGovt%20Engineering%20College%20Kozhikode!5e0!3m2!1sen!2sin!4v1739090381271!5m2!1sen!2sin"
+                allowfullscreen=""
+                loading="lazy"
+              ></iframe>
+            </div>
+          </div>
         </div>
       </div>
-      
-    
-
-    <section id="about" class="h-screen flex flex-col justify-center items-center text-white bg-gradient-to-b from-orange-600 to-yellow-800">
-        <h2 class="text-4xl font-bold">Event Details</h2>
-        <p class="text-lg mt-4">The 23rd Annual ISTE State Student Convention is a prestigious gathering of aspiring engineers and innovators from across Kerala. 
-            Hosted by Government Engineering College Kozhikode, this event serves as a platform to celebrate creativity, knowledge sharing, and technological excellence. 
-            With a variety of workshops, competitions, and networking opportunities, 
-            the convention fosters a spirit of collaboration and encourages students to explore emerging trends in engineering and technology. 
-            It is a unique occasion where ideas converge, talents shine, and participants leave inspired to make a meaningful impact in their fields.</p>
-            <section class="card-container">
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front"></div>
-                        <div class="card-back">
-                            <h2>Card 1</h2>
-                            <p>Details about Card 1.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front"></div>
-                        <div class="card-back">
-                            <h2>Card 2</h2>
-                            <p>Details about Card 2.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front"></div>
-                        <div class="card-back">
-                            <h2>Card 3</h2>
-                            <p>Details about Card 3.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front"></div>
-                        <div class="card-back">
-                            <h2>Card 4</h2>
-                            <p>Details about Card 4.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="card-inner">
-                        <div class="card-front"></div>
-                        <div class="card-back">
-                            <h2>Card 5</h2>
-                            <p>Details about Card 5.</p>
-                        </div>
-                    </div>
-                </div>
-            </section>
-            
-            <button class="reset-btn" onclick="resetCards()">×</button>
-            
-    
     </section>
-            <section>
-
-
-              <div class="location-section ">
-                <div class="glass-layer"></div>
-                <div class="content">
-                    <div class="location-text">
-                        <h2>Venue: Govt Engineering College Kozhikode</h2>
-                        <a href="https://maps.app.goo.gl/HPhHBnZdf1ajnRDn8" class="map-btn" target="_blank">Open in Maps</a>
-                    </div>
-                    <div class="map-wrapper">
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.6682563069576!2d75.76770577594576!3d11.285778688895697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65edc9239e10b%3A0xc923c3216410409a!2sGovt%20Engineering%20College%20Kozhikode!5e0!3m2!1sen!2sin!4v1739090381271!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-
-
-            </section>
-
-
-
 
     <script src="script.js"></script>
-
-</body>
+  </body>
 </html>
