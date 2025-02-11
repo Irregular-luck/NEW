@@ -28,15 +28,19 @@
 
     <section
       id="home"
-      class="flex items-center justify-center h-screen text-center"
-    >
-      <div data-aos="fade-up">
-        <h1 class="text-5xl font-bold">
-          23RD ANNUAL ISTE<br />
-          STATE STUDENT CONVENCTION<br />
-          GOVERNMENT ENGINEERING COLLEGE KOZHIKODE<br />
-        </h1>
-      </div>
+      class="flex items-center justify-center h-screen text-center">
+          <div class="relative inline-block">
+            <!-- Bottom Layer (Light Orange) -->
+            <h1 class="absolute text-9xl text-orange-300 left-[5px] top-0">Ignifex</h1>
+            
+            <!-- Middle Layer (Red) -->
+            <h1 class="absolute text-9xl text-red-500 left-[2.5px] top-0">Ignifex</h1>
+            
+            <!-- Top Layer (White) -->
+            <h1 class="relative text-9xl text-white">Ignifex</h1>
+          </div>
+        
+      
     </section>
 <!-- counter background is here -->
     <div
@@ -61,10 +65,10 @@
       </div>
     </div>
 
-    <section
-      id="about"
-      class="h-screen flex flex-col justify-center items-center text-white bg-gradient-to-b from-orange-600 to-yellow-800"
+    <section id="about" class="h-screen flex flex-col justify-center items-center text-white bg-gradient-to-b from-orange-600 to-yellow-800"
     >
+    <div>
+    <div class="bg-slate-400 p-5 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.7)]"> 
       <h2 class="text-4xl font-bold">Event Details</h2>
       <p class="text-lg mt-4">
         The 23rd Annual ISTE State Student Convention is a prestigious gathering
@@ -78,7 +82,9 @@
         and participants leave inspired to make a meaningful impact in their
         fields.
       </p>
-      <section class="card-container">
+     </div>
+    </div>
+      <div class="card-container">
         <div class="card">
           <div class="card-inner">
             <div class="card-front"></div>
@@ -124,31 +130,46 @@
             </div>
           </div>
         </div>
-      </section>
+        <button class="reset-btn" onclick="resetCards()">×</button>
+    </div>
 
-      <button class="reset-btn" onclick="resetCards()">×</button>
+      
     </section>
+   
+
     <section>
-      <div class="location-section">
-        <div class="glass-layer"></div>
-        <div class="content">
-          <div class="location-text">
-            <h2>Venue: Govt Engineering College Kozhikode</h2>
-            <a
-              href="https://maps.app.goo.gl/HPhHBnZdf1ajnRDn8"
-              class="map-btn"
-              target="_blank"
-              >Open in Maps</a
-            >
-          </div>
-          <div class="map-wrapper">
-            <div class="map-container">
-              <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.6682563069576!2d75.76770577594576!3d11.285778688895697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65edc9239e10b%3A0xc923c3216410409a!2sGovt%20Engineering%20College%20Kozhikode!5e0!3m2!1sen!2sin!4v1739090381271!5m2!1sen!2sin"
-                allowfullscreen=""
-                loading="lazy"
-              ></iframe>
+      <div class="bg-gradient-to-r from-amber-900 via-yellow-700 to-amber-100 flex flex-col md:flex-row ">
+        <!-- Location Section -->
+        <div class="flex-1 p-6">
+          <div class="location-section relative">
+            <div class="glass-layer"></div>
+            <div class="content">
+              <div class="location-text">
+                <h2 class="text-white text-2xl font-bold">Venue: Govt Engineering College Kozhikode</h2>
+                <a href="https://maps.app.goo.gl/HPhHBnZdf1ajnRDn8" class="map-btn bg-yellow-500 text-black px-4 py-2 rounded-md mt-2 inline-block" target="_blank">
+                  Open in Maps
+                </a>
+              </div>
+              <div class="map-wrapper mt-4">
+                <div class="map-container">
+                  <iframe
+                    class="w-full h-64 rounded-lg shadow-lg"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.6682563069576!2d75.76770577594576!3d11.285778688895697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65edc9239e10b%3A0xc923c3216410409a!2sGovt%20Engineering%20College%20Kozhikode!5e0!3m2!1sen!2sin!4v1739090381271!5m2!1sen!2sin"
+                    allowfullscreen=""
+                    loading="lazy"
+                  ></iframe>
+                </div>
+              </div>
             </div>
+          </div>
+        </div>
+      
+        <!-- Contact Section -->
+        <div class="bg-gradient-to-r from-amber-500 via-yellow-700 to-amber-900 text-white flex-1 p-6 flex justify-center items-center">
+          <div class="text-center">
+            <h2 class="text-3xl font-bold">Contact</h2>
+            <p class="mt-2">Email: example@gmail.com</p>
+            <p>Phone: +91 9876543210</p>
           </div>
         </div>
       </div>

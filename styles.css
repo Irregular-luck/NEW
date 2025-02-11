@@ -1,4 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Prompt:wght@400;500;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&display=swap');
+
 
 
 
@@ -10,14 +12,48 @@
   font-weight: 400;
   font-style: normal;
 }
-#home{
+#home {
+    position: relative;
     background: url(https://i.ibb.co/zHX2HSdz/abhiram.jpg) center/cover no-repeat;
+    display: flex;
+    align-items: center; /* Center the content */
+    justify-content: center;
+    text-align: center;
+    height: 100vh; /* Full screen height */
 }
+
+#home::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay */
+    z-index: 0; /* Ensures it stays behind the content */
+}
+
+#home h1 { /* Your h tag */
+    
+    z-index: 1; /* Brings it above the overlay */
+     /* Make sure it's readable */
+    font-family: "Orbitron",sans-serif;
+    font-weight: 600;
+}
+
+
+#about{
+    background: rgba(245, 222, 179, 0.9); /* Warm Beige for readability */
+    padding: 30px;
+    max-width: 100%;
+    text-align: center;
+    color: #2d2d2d; /* Dark text for contrast */
+}
+
 
 body {
     font-family: Arial, sans-serif;
     height: 200vh; /* To enable scrolling effect */
-    background: linear-gradient(to bottom, brown, black);
 
 }
 
@@ -55,8 +91,8 @@ body {
 .register-btn {
     font-size: 16px;
     text-decoration: none;
-    color: brown;
-    background-color: orangered;
+    color: yellow;
+    background-color: #ec5c24;
     padding: 8px 12px;
     border-radius: 14px;
     transition: 0.3s ease-in-out;
@@ -72,7 +108,7 @@ body {
     font-size: 24px;
     cursor: pointer;
     user-select: none;
-    color: orangered;
+    color: yellow;
 }
 
 /* Sidebar */
