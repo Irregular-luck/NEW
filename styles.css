@@ -203,11 +203,21 @@ body {
     .logo {
         width: 40px; /* Reduce logo size for mobile */
         height: 40px;
+        transform: translateX(10%);
     }
 
     .register-btn {
-        display: none; /* Hide register button on mobile */
+        font-size: 16px;
+        text-decoration: none;
+        color: yellow;
+        background-color: #ec5c24;
+        padding: 5px 8px;
+        border-radius: 14px;
+        transition: 0.3s ease-in-out;
+        margin-left: auto;
     }
+
+
 
     .menu {
         font-size: 20px; /* Reduce menu icon size */
@@ -215,12 +225,25 @@ body {
 
     /* Sidebar */
     .sidebar {
-        width: 100%; /* Full width sidebar */
+        width: 80%; /* Full width sidebar */
         left: -100%; /* Hide initially */
+        height: 50%;
+        top: 25%;
+        backdrop-filter: blur(0px);
+        background: rgba(250, 128, 32,0.9);
+        border-radius: 20px;
+
+
+
+
     }
 
     .sidebar.active {
-        left: 0; /* Slide in */
+        left: 10%; /* Slide in */
+        height: 50%;
+        top: 25%;
+
+
     }
 }  /*mobile*/
   
