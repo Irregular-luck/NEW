@@ -153,97 +153,64 @@ body {
 }
 
 /* Mobile Responsive Styles */
-@media (max-width: 768px) {
-    /* Home Section */
-    #home h1 {
-        font-size: 4rem; /* Reduce font size for mobile */
-    }
+/* === Mobile Overrides: Horizontal Slider === */
+/* === Mobile Overrides: Horizontal Slider === */
+@media screen and (max-width: 768px) {
+  .card-container {
+      display: flex;
+      flex-direction: row;
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      padding: 10px;
+      width: 100%;
+      justify-content: flex-start;
+      align-items: center;
+  }
 
-    /* About Section */
-    #about {
-        padding: 20px; /* Reduce padding for mobile */
-        margin-bottom: 40px; /* Add space below the About Section */
-    }
+  /* Hide scrollbar for cleaner look */
+  .card-container::-webkit-scrollbar {
+      display: none;
+  }
+  .card-container {
+      -ms-overflow-style: none;
+      scrollbar-width: none;
+  }
 
-    #about .bg-black\/50 {
-        flex-direction: column; /* Stack content vertically */
-        align-items: center; /* Center-align items */
-        text-align: center; /* Center-align text */
-        padding: 20px; /* Add padding */
-        max-width: 100%; /* Ensure full width */
-    }
+  /* Card styles for mobile */
+  .card {
+      position: relative;
+      width: 55vw; /* Reduced width for better fit */
+      height: 280px; /* Reduced height */
+      margin-right: 10px;
+      flex-shrink: 0;
+      scroll-snap-align: start;
+      margin-top: 0;
+      transform: none !important; /* Ensure no rotation or scaling in mobile */
+  }
 
-    #about img {
-        width: 100px; /* Reduce logo size for mobile */
-        height: 100px;
-        margin-bottom: 20px; /* Add space below the logo */
-    }
+  /* Ensure the last card is fully visible */
+  .card:last-child {
+      margin-right: 20px;
+  }
 
-    #about h2 {
-        font-size: 1.5rem; /* Reduce heading size for mobile */
-        margin-bottom: 10px; /* Add space below the heading */
-    }
+  /* Prevent desktop transformation styles from applying */
+  .card.selected {
+      transform: none !important;
+  }
 
-    #about p {
-        font-size: 0.9rem; /* Reduce paragraph text size for mobile */
-        line-height: 1.5; /* Improve readability */
-        margin-bottom: 10px; /* Add space between paragraphs */
-    }
+  /* Keep cards centered */
+  .card-wrapper {
+      display: flex;
+      justify-content: center;
+      flex-shrink: 0;
+  }
 
-    /* Navbar */
-    .navbar {
-        top: 0;
-        left: 0;
-        transform: none;
-        width: 100%;
-        border-radius: 0;
-        padding: 10px;
-    }
+  /* Optional: card hover effects for better user interaction */
+  .card:hover .card-inner,
+  .card.selected .card-inner {
+      transform: rotateY(180deg);
+  }
+}
 
-    .logo {
-        width: 40px; /* Reduce logo size for mobile */
-        height: 40px;
-        transform: translateX(10%);
-    }
-
-    .register-btn {
-        font-size: 16px;
-        text-decoration: none;
-        color: yellow;
-        background-color: #ec5c24;
-        padding: 5px 8px;
-        border-radius: 14px;
-        transition: 0.3s ease-in-out;
-        margin-left: auto;
-    }
-
-
-
-    .menu {
-        font-size: 20px; /* Reduce menu icon size */
-    }
-
-    /* Sidebar */
-    .sidebar {
-        width: 80%; /* Full width sidebar */
-        left: -100%; /* Hide initially */
-        height: 50%;
-        top: 25%;
-        backdrop-filter: blur(0px);
-        background: rgba(250, 128, 32,0.9);
-        border-radius: 20px;
-
-
-
-
-    }
-
-    .sidebar.active {
-        left: 10%; /* Slide in */
-        height: 50%;
-        top: 25%;
-
-
-    }
-}  /*mobile*/
   
