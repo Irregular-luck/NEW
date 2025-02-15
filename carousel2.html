@@ -1,0 +1,514 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTE Events</title>
+     <style>
+     * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #180404;
+    color: white;
+    overflow-x: hidden; /* Prevent horizontal scroll */
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.main-title {
+    margin-bottom: 3rem;
+}
+
+.main-title h2 {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.wave-line {
+    width: 80px;
+    height: 4px;
+    background-color: #991b1b;
+}
+
+.divider {
+    height: 24px;
+    background-color: #991b1b;
+}
+
+.slider-container {
+    position: relative;
+    height: 400px;
+    margin: 2rem 0;
+    perspective: 1000px;
+    /* Align slider to the left */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    overflow: hidden;
+    padding-left: 20px; /* Add some padding from the left edge */
+}
+
+.slider {
+    position: relative;
+    height: 100%;
+    transform-style: preserve-3d;
+    width: 250px;
+    /* Remove margin auto to align left */
+    margin: 0;
+}
+
+.slide {
+    position: absolute;
+    width: 250px;
+    height: 350px;
+    background: #2a1f1f;
+    border-radius: 10px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: all 0.5s ease-out;
+    transform-origin: center;
+    /* Remove left 50% to align left */
+    left: 0;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.slide .number {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.slide .label {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    font-size: 1.2rem;
+}
+
+.nav-buttons {
+    position: absolute;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    z-index: 10;
+    padding: 0 20px;
+    pointer-events: none;
+}
+
+.nav-button {
+    background: rgba(255, 255, 255, 0.1);
+    border: none;
+    color: white;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(4px);
+    transition: background-color 0.3s ease;
+    pointer-events: auto;
+}
+
+.nav-button:hover {
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.stats {
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1472&q=80');
+    background-size: cover;
+    background-position: center;
+    padding: 4rem 0;
+    margin-top: 2rem;
+}
+
+.stats-container {
+    display: flex;
+    justify-content: space-around;
+    text-align: center;
+    flex-wrap: wrap;
+}
+
+.stat-item {
+    padding: 0 1rem;
+    margin-bottom: 2rem;
+}
+
+.stat-item h3 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item p {
+    font-size: 1.2rem;
+    text-transform: uppercase;
+}
+
+.society-info {
+    padding: 4rem 0;
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+}
+
+.society-text {
+    flex: 2;
+}
+
+.society-text h2 {
+    color: rgb(216, 180, 254);
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.society-text p {
+    line-height: 1.6;
+}
+
+.society-logo {
+    flex: 1;
+    text-align: center;
+}
+
+.society-logo img {
+    max-width: 250px;
+}
+
+@media (max-width: 768px) {
+    .slider-container {
+        height: 300px;
+    }
+    
+    .slider {
+        width: 200px;
+    }
+    
+    .slide {
+        width: 200px;
+        height: 280px;
+    }
+
+    .society-info {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .society-text h2 {
+        font-size: 1.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 1rem;
+    }
+
+    .slider-container {
+        height: 250px;
+        padding-left: 10px;
+    }
+    
+    .slider {
+        width: 180px;
+    }
+    
+    .slide {
+        width: 180px;
+        height: 240px;
+    }
+
+    .main-title h2 {
+        font-size: 1.5rem;
+    }
+
+    .stat-item h3 {
+        font-size: 2.5rem;
+    }
+
+    .stat-item p {
+        font-size: 1rem;
+    }
+}
+     </style>
+</head>
+<body>
+    <div class="container">
+        <div class="main-title">
+            <h2>WORKSHOPS</h2>
+            <div class="wave-line"></div>
+        </div>
+
+        <div class="slider-container" id="workshops-slider">
+            <div class="nav-buttons">
+                <button onclick="moveSlide('workshops-slider', -1)" class="nav-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <button onclick="moveSlide('workshops-slider', 1)" class="nav-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Workshop 1">
+                    <div class="number">01</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Workshop 2">
+                    <div class="number">02</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Workshop 3">
+                    <div class="number">03</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Workshop 4">
+                    <div class="number">04</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Workshop 5">
+                    <div class="number">05</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <div class="main-title">
+            <h2>PRE-EVENTS</h2>
+            <div class="wave-line"></div>
+        </div>
+
+        <div class="slider-container" id="pre-events-slider">
+            <div class="nav-buttons">
+                <button onclick="moveSlide('pre-events-slider', -1)" class="nav-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <button onclick="moveSlide('pre-events-slider', 1)" class="nav-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Pre-event 1">
+                    <div class="number">01</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Pre-event 2">
+                    <div class="number">02</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Pre-event 3">
+                    <div class="number">03</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Pre-event 4">
+                    <div class="number">04</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Pre-event 5">
+                    <div class="number">05</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <div class="main-title">
+            <h2>TECH TALK</h2>
+            <div class="wave-line"></div>
+        </div>
+
+        <div class="slider-container" id="tech-talk-slider">
+            <div class="nav-buttons">
+                <button onclick="moveSlide('tech-talk-slider', -1)" class="nav-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <button onclick="moveSlide('tech-talk-slider', 1)" class="nav-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Tech Talk 1">
+                    <div class="number">01</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Tech Talk 2">
+                    <div class="number">02</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Tech Talk 3">
+                    <div class="number">03</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Tech Talk 4">
+                    <div class="number">04</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg"alt="Tech Talk 5">
+                    <div class="number">05</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="divider"></div>
+
+    <div class="container">
+        <div class="main-title">
+            <h2>EVENTS</h2>
+            <div class="wave-line"></div>
+        </div>
+
+        <div class="slider-container" id="events-slider">
+            <div class="nav-buttons">
+                <button onclick="moveSlide('events-slider', -1)" class="nav-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m15 18-6-6 6-6"/></svg>
+                </button>
+                <button onclick="moveSlide('events-slider', 1)" class="nav-button">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="m9 18 6-6-6-6"/></svg>
+                </button>
+            </div>
+            <div class="slider">
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Event 1">
+                    <div class="number">01</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Event 2">
+                    <div class="number">02</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Event 3">
+                    <div class="number">03</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Event 4">
+                    <div class="number">04</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+                <div class="slide">
+                    <img src="https://i.ibb.co/1GSgrjKS/293d32db6bdeaf65c3571c5954e12a56.jpg" alt="Event 5">
+                    <div class="number">05</div>
+                    <div class="label">COMING SOON</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="stats">
+        <div class="stats-container">
+            <div class="stat-item">
+                <h3>14</h3>
+                <p>Districts</p>
+            </div>
+            <div class="stat-item">
+                <h3>341+</h3>
+                <p>Colleges</p>
+            </div>
+            <div class="stat-item">
+                <h3>2000+</h3>
+                <p>Participants</p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <div class="society-info">
+            <div class="society-text">
+                <h2>INDIAN SOCIETY FOR TECHNICAL EDUCATION (ISTE)</h2>
+                <p>
+                    ISTE (Indian Society for Technical Education) is a national-level professional organization that promotes technical education and skill development among students and educators. 
+                    It conducts workshops, seminars, hackathons, and competitions to enhance knowledge in engineering, technology, and innovation. 
+                    ISTE provides a platform for students to collaborate, develop leadership skills, and stay updated with industry trends.
+                </p>
+            </div>
+            <div class="society-logo">
+                <img src="https://i.ibb.co/XkdMT1K2/ISTE-LOGO.png" alt="ISTE Logo">
+            </div>
+        </div>
+    </div>
+
+    <script>function updateSlides(sliderId) {
+        const slider = document.getElementById(sliderId);
+        const slides = slider.querySelectorAll('.slide');
+        const currentSlide = parseInt(slider.dataset.currentSlide || 0);
+    
+        slides.forEach((slide, index) => {
+            const offset = index - currentSlide;
+            const rotateY = offset * 30;
+            const translateZ = Math.abs(offset) * -100;
+            const opacity = 1 - Math.abs(offset) * 0.2;
+    
+            slide.style.transform = `
+                translateX(${offset * 260}px)
+                translateZ(${translateZ}px)
+                rotateY(${rotateY}deg)
+            `;
+            slide.style.opacity = opacity;
+            slide.style.zIndex = 5 - Math.abs(offset);
+        });
+    }
+    
+    function moveSlide(sliderId, direction) {
+        const slider = document.getElementById(sliderId);
+        const slides = slider.querySelectorAll('.slide');
+        let currentSlide = parseInt(slider.dataset.currentSlide || 0);
+    
+        currentSlide = (currentSlide + direction + slides.length) % slides.length;
+        slider.dataset.currentSlide = currentSlide;
+    
+        updateSlides(sliderId);
+    }
+    
+    // Initial setup for all sliders
+    document.addEventListener('DOMContentLoaded', () => {
+        document.querySelectorAll('.slider-container').forEach(slider => {
+            slider.dataset.currentSlide = 0;
+            updateSlides(slider.id);
+        });
+    });</script>
+</body>
+</html>
