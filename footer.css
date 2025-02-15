@@ -1,0 +1,36 @@
+/* Underline for Headings */
+.underline-heading {
+    position: relative;
+  }
+  
+  .underline-heading::after {
+    content: "";
+    display: block;
+    width: 50%;
+    height: 2px;
+    background-color: #fb923c;
+    margin: 4px auto 0;
+  }
+  
+  /* Vertical Separator for Desktop */
+  .separator {
+    position: absolute;
+    top: 10%;
+    right: 0;
+    width: 1px;
+    height: 80%;
+    background-color: #fb923c;
+  }
+  
+  /* Horizontal Separator for Mobile */
+  @media (max-width: 767px) {
+    .section:not(:last-child)::after {
+      content: "";
+      display: block;
+      width: 80%;
+      height: 1px;
+      background-color: #fb923c;
+      margin: 16px auto;
+    }
+  }
+  
