@@ -1,99 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Floating Blur Navbar</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="card.main.css" />
 
-    <link rel="stylesheet" href="location.css">
+    <link rel="stylesheet" href="location.css" />
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://unpkg.com/lucide@latest"></script>
 
-</head>
-<body>
-
+  </head>
+  <body>
     <nav class="navbar">
-        <a href="register.html" class="register-btn">Register</a>
-        <div class="logo"></div>
-        <div class="menu" onclick="toggleMenu()">☰</div>
+      <div class="menu" onclick="toggleMenu()">☰</div>
+      <div class="logo"></div>
+      <a href="register.html" class="register-btn">Register</a>
+      
     </nav>
 
     <div class="sidebar" id="sidebar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
-        </ul>
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#events">Events</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a href="#contact">Direction</a></li>
+      </ul>
     </div>
 
-    <section id="home" class="flex items-center justify-center h-screen  text-center">
-        <div data-aos="fade-up">
-            <h1 class="text-5xl font-bold">23RD ANNUAL ISTE<br>
-            STATE STUDENT CONVENCTION<br>
-            GOVERNMENT ENGINEERING COLLEGE KOZHIKODE<br>
-            </h1>
-        </div>
+    <section
+      id="home" class="flex items-center justify-center h-screen text-center">
+          <div class="relative inline-block">
+            <!-- Bottom Layer (Light Orange) -->
+            <h1 class="absolute text-9xl text-orange-300 left-[5px] top-0">Ignifex</h1>
+            
+            <!-- Middle Layer (Red) -->
+            <h1 class="absolute text-9xl text-red-500 left-[2.5px] top-0">Ignifex</h1>
+            
+            <!-- Top Layer (White) -->
+            <h1 class="relative text-9xl text-white">Ignifex</h1>
+          </div>
+        
+      
     </section>
-
-
-    <div class="grid grid-cols-4 gap-8 text-center bg-[url('https://i.ibb.co/qM4sHhLC/Whats-App-Image-2025-02-09-at-14-08-40-cc47b0d2.jpg')] bg-cover bg-center bg-no-repeat p-8 h-50 text-white"
-     style="font-family: 'Roboto Condensed', sans-serif;">
-
-
-        <div>
+<!-- counter background is here -->
+    <div
+      class="grid grid-cols-4 gap-8 text-center bg-[url('https://i.ibb.co/qM4sHhLC/Whats-App-Image-2025-02-09-at-14-08-40-cc47b0d2.jpg')] bg-cover bg-center bg-no-repeat p-8 h-50 text-white"
+      style="font-family: 'Roboto Condensed', sans-serif"
+    >
+      <div>
         <p id="days" class="text-6xl font-bold">0</p>
         <p class="mt-2 text-lg uppercase">Days</p>
       </div>
-        <div>
-          <p id="hours" class="text-6xl font-bold">0</p>
-          <p class="mt-2 text-lg uppercase">Hours</p>
+      <div>
+        <p id="hours" class="text-6xl font-bold">0</p>
+        <p class="mt-2 text-lg uppercase">Hours</p>
+      </div>
+      <div>
+        <p id="minutes" class="text-6xl font-bold">0</p>
+        <p class="mt-2 text-lg uppercase">Minutes</p>
+      </div>
+      <div>
+        <p id="seconds" class="text-6xl font-bold">0</p>
+        <p class="mt-2 text-lg uppercase">Seconds</p>
+      </div>
+    </div>
+
+    <section id="about" class="h-screen flex flex-col justify-center items-center text-white bg-gradient-to-b from-orange-600 to-yellow-800"
+    >
+    <div class="relative w-full flex justify-center">
+      <!-- Details Box -->
+      <div class="bg-black/50 backdrop-blur-lg p-8 sm:p-10 rounded-xl shadow-[0_20px_50px_rgba(0,0,0,0.7)] flex flex-col sm:flex-row items-center sm:items-start max-w-[99.9%] min-h-[380px] text-white">
+  
+        <!-- ISTE Logo (Centered on Mobile, Left on Larger Screens) -->
+        <img src="https://i.ibb.co/XkdMT1K2/ISTE-LOGO.png" 
+             alt="ISTE Logo" 
+             class="w-24 h-24 sm:w-40 sm:h-40 rounded-lg mb-6 sm:mb-0 sm:mr-12">
+        
+        <!-- Text Content -->
+        <div class="flex-1 text-center sm:text-left">
+          <h2 class="text-3xl sm:text-5xl font-bold">Indian Society for Technical Education</h2>
+          
+          <p class="text-lg sm:text-xl mt-4 sm:mt-6 leading-relaxed">
+            The Indian Society for Technical Education (ISTE) is a national-level organization committed to enhancing the quality of technical education in India.
+            With a vast network of faculty and student members across the country, ISTE plays a key role in promoting research, skill development, and industry-academia interaction.
+          </p>
+      
+          <p class="text-lg sm:text-xl mt-4 leading-relaxed">
+            The ISTE Student Chapter at GECK is an active hub for innovation, organizing technical workshops, competitions, seminars, and hands-on training programs.
+            It serves as a bridge between students and the professional world, equipping them with the latest technological skills, leadership qualities, and problem-solving abilities.
+          </p>
         </div>
-        <div>
-          <p id="minutes" class="text-6xl font-bold">0</p>
-          <p class="mt-2 text-lg uppercase">Minutes</p>
-        </div>
-        <div>
-          <p id="seconds" class="text-6xl font-bold">0</p>
-          <p class="mt-2 text-lg uppercase">Seconds</p>
-        </div>
+      
       </div>
       
+    </div>
     
-
-    <section id="about" class="h-screen flex flex-col justify-center items-center text-white bg-gradient-to-b from-orange-600 to-yellow-800">
-        <h2 class="text-4xl font-bold">Event Details</h2>
-        <p class="text-lg mt-4">The 23rd Annual ISTE State Student Convention is a prestigious gathering of aspiring engineers and innovators from across Kerala. 
-            Hosted by Government Engineering College Kozhikode, this event serves as a platform to celebrate creativity, knowledge sharing, and technological excellence. 
-            With a variety of workshops, competitions, and networking opportunities, 
-            the convention fosters a spirit of collaboration and encourages students to explore emerging trends in engineering and technology. 
-            It is a unique occasion where ideas converge, talents shine, and participants leave inspired to make a meaningful impact in their fields.</p>
     
-    </section>
-            <section>
-
-
-              <div class="location-section ">
-                <div class="glass-layer"></div>
-                <div class="content">
-                    <div class="location-text">
-                        <h2>Venue: Govt Engineering College Kozhikode</h2>
-                        <a href="https://goo.gl/maps/XqZ6uFyH2yNp9t2X8" class="map-btn" target="_blank">Open in Maps</a>
-                    </div>
-                    <div class="map-wrapper">
-                        <div class="map-container">
-                            <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.6682563069576!2d75.76770577594576!3d11.285778688895697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65edc9239e10b%3A0xc923c3216410409a!2sGovt%20Engineering%20College%20Kozhikode!5e0!3m2!1sen!2sin!4v1739090381271!5m2!1sen!2sin" allowfullscreen="" loading="lazy"></iframe>
-                        </div>
-                    </div>
-                </div>
+    
+    
+    
+      <div id="events" class="card-container">
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://i.ibb.co/WNrX9VYH/0c912ce42f6d3d657d240c760d879a46.jpg" alt="Workshop Image" class="card-image">
             </div>
+            <div class="card-back">
+              <h2>WORKSHOPS</h2>
+              <p>Details</p>
+              <a href="carousel2.html" target="_blank" class="btn">Visit</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://i.ibb.co/WNrX9VYH/0c912ce42f6d3d657d240c760d879a46.jpg" alt="Workshop Image" class="card-image">
+            </div>
+            <div class="card-back">
+              <h2>Card 2</h2>
+              <p>Details about Card 2.</p>
+              <a href="carousel2.html" target="_blank" class="btn">Visit</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://i.ibb.co/WNrX9VYH/0c912ce42f6d3d657d240c760d879a46.jpg" alt="Workshop Image" class="card-image">
+            </div>
+            <div class="card-back">
+              <h2>Card 3</h2>
+              <p>Details about Card 3.</p>
+              <a href="carousel2.html" target="_blank" class="btn">Visit</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://i.ibb.co/WNrX9VYH/0c912ce42f6d3d657d240c760d879a46.jpg" alt="Workshop Image" class="card-image">
+            </div>
+            <div class="card-back">
+              <h2>Card 4</h2>
+              <p>Details about Card 4.</p>
+              <a href="carousel2.html" target="_blank" class="btn">Visit</a>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-inner">
+            <div class="card-front">
+              <img src="https://i.ibb.co/WNrX9VYH/0c912ce42f6d3d657d240c760d879a46.jpg" alt="Workshop Image" class="card-image">
+            </div>
+            <div class="card-back">
+              <h2>Card 5</h2>
+              <p>Details about Card 5.</p>
+              <a href="carousel2.html" target="_blank" class="btn">Visit</a>
+            </div>
+          </div>
+        </div>
+        <button class="reset-btn" onclick="resetCards()">×</button>
+    </div>
+
+      
+    </section>
+   
+
+    <section id="contact">
+      <div class="bg-gradient-to-r from-amber-900 via-yellow-700 to-amber-100 flex flex-col md:flex-row p-6">
 
 
 
-            </section>
+        <!-- Location Section -->
+        <div class="md:w-1/2 p-6">
+          <div class="location-section relative">
+            <div class="glass-layer">
+              
+            </div>
+            <div class="content">
+              <div class="location-text text-center">
+                <h2 class="text-white text-2xl font-bold">Venue: Govt Engineering College Kozhikode</h2>
+                <a href="https://maps.app.goo.gl/HPhHBnZdf1ajnRDn8"
+                  class="map-btn bg-yellow-500 text-black px-4 py-2 rounded-md mt-2 inline-block" target="_blank">
+                  Open in Maps
+                </a>
+              </div>
+              <div class="map-wrapper mt-4">
+                <div class="map-container">
+                  <iframe class="w-full h-64 rounded-lg shadow-lg"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3912.6682563069576!2d75.76770577594576!3d11.285778688895697!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3ba65edc9239e10b%3A0xc923c3216410409a!2sGovt%20Engineering%20College%20Kozhikode!5e0!3m2!1sen!2sin!4v1739090381271!5m2!1sen!2sin"
+                    allowfullscreen="" loading="lazy">
+                  </iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+    
+        <!-- About the Host Section -->
+        <div class="md:w-1/2 p-6 bg-white bg-opacity-10 backdrop-blur-lg shadow-lg rounded-xl">
+
+          <h2 class="text-gray-600 text-2xl font-bold text-center">About the Host</h2>
+          <div class="flex flex-col items-center mt-4">
+            <img src="https://i.ibb.co/99t3tTcp/Firefly-20250205144553.jpg" alt="Host Image" class="w-64 h-40 rounded-lg shadow-lg object-cover transition-transform duration-300 hover:scale-105 border-2 border-white">
+            <p class="text-black text-lg text-center mt-4">
+              Government Engineering College, Kozhikode (GECK)
+              Established in 1999, Government Engineering College, Kozhikode (GECK) is a premier institution dedicated to academic excellence and technological innovation.
+              Affiliated with APJ Abdul Kalam Technological University (KTU) and approved by AICTE, GECK offers cutting-edge undergraduate and postgraduate programs in various engineering disciplines.
+              
+              With a mission to nurture young minds and develop skilled professionals,
+              GECK fosters a vibrant academic and research culture. The institution emphasizes practical learning, 
+              industry collaboration, and innovation, empowering students to excel in their respective fields. 
+              Over the years, GECK has built a strong reputation for producing technically sound, socially responsible, and globally competitive engineers.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
 
 
+    <!-- <section>
+      <div>
+
+      </div>
+
+      <div class="bg-gradient-to-r from-amber-500 via-yellow-700 to-amber-900 text-white p-6 flex justify-center items-center">
+        <div class="text-center">
+          <h2 class="text-3xl font-bold">Contact</h2>
+          <p class="mt-2">Email: example@gmail.com</p>
+          <p>Phone: +91 9876543210</p>
+        </div>
+      </div>
+      </section> -->
+
+      <!-- Footer -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-content">
+        
+
+        <div class="footer-section">
+          <h3>Quick Links</h3>
+          <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#events">Events</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Contact Us</h3>
+          <ul>
+            <li class="footer-li"><i data-lucide="map-pin"></i>&nbsp;Address geckkd,westhill</li>
+            <li class="footer-li"><i data-lucide="phone"></i>&nbsp;(555) 987-6543</li>
+            <li class="footer-li"><i data-lucide="mail"></i> &nbsp;ignifex@iste.org</li>
+          </ul>
+        </div>
+
+        <div class="footer-section">
+          <h3>Follow Us</h3>
+          <div class="social-links">
+            <a href="#" aria-label="Facebook"><i data-lucide="facebook"></i></a>
+            <a href="#" aria-label="Twitter"><i data-lucide="twitter"></i></a>
+            <a href="#" aria-label="Instagram"><i data-lucide="instagram"></i></a>
+            <a href="#" aria-label="LinkedIn"><i data-lucide="linkedin"></i></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <p>&copy; 2025 Ignifex. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+
+
+
+
+    
+    
+   
 
     <script src="script.js"></script>
-</body>
+  </body>
 </html>

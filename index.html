@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bird Preloader</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      background: #121212;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    #preloader {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: #121212;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      z-index: 9999;
+    }
+
+    #preloader img {
+      width: 250px;
+      animation: shine 2s infinite alternate, zoomIn 1.5s ease 4s forwards;
+    }
+
+    @keyframes shine {
+      0% { filter: brightness(1); }
+      50% { filter: brightness(2.5); }
+      100% { filter: brightness(1); }
+    }
+
+    @keyframes zoomIn {
+      0% { transform: scale(1); opacity: 1; }
+      100% { transform: scale(11); opacity: 0; }
+    }
+  </style>
+</head>
+<body>
+
+  <div id="preloader">
+    <img src="https://raw.githubusercontent.com/Irregular-luck/svg-host/refs/heads/main/SSC%20SYMBOL%20%20(20250210051857).svg" alt="Shining Bird">
+  </div>
+
+  <script>
+    setTimeout(() => {
+      window.location.href = "main.html"; // Redirect to index.html
+    }, 5500); // Adjust time to match the animation
+  </script>
+
+</body>
+</html>
